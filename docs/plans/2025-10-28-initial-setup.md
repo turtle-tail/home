@@ -13,6 +13,7 @@
 ## Task 1: Initialize Next.js Project
 
 **Files:**
+
 - Create: `package.json` (via create-next-app)
 - Create: `tsconfig.json` (via create-next-app)
 - Create: `next.config.js`
@@ -26,11 +27,12 @@ npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir
 ```
 
 Expected: Prompts answered with:
+
 - TypeScript: Yes
 - ESLint: Yes
 - Tailwind CSS: Yes
 - App Router: Yes
-- Import alias: Yes (@/*)
+- Import alias: Yes (@/\*)
 
 **Step 2: Verify installation**
 
@@ -39,6 +41,7 @@ ls -la
 ```
 
 Expected output should include:
+
 - package.json
 - tsconfig.json
 - next.config.js (or next.config.mjs)
@@ -90,6 +93,7 @@ git commit -m "feat: initialize Next.js project with TypeScript and Tailwind"
 ## Task 2: Setup Project Structure and Types
 
 **Files:**
+
 - Create: `lib/types.ts`
 - Create: `content/projects.ts`
 - Create: `public/icons/.gitkeep`
@@ -169,6 +173,7 @@ git commit -m "feat: add project data structure and types"
 ## Task 3: Create ProjectCard Component
 
 **Files:**
+
 - Create: `components/project-card.tsx`
 
 **Step 1: Create components directory**
@@ -256,6 +261,7 @@ git commit -m "feat: add ProjectCard component"
 ## Task 4: Create ProjectGrid Component
 
 **Files:**
+
 - Create: `components/project-grid.tsx`
 
 **Step 1: Create ProjectGrid component**
@@ -309,6 +315,7 @@ git commit -m "feat: add ProjectGrid component"
 ## Task 5: Create Header Component
 
 **Files:**
+
 - Create: `components/header.tsx`
 
 **Step 1: Create Header component**
@@ -350,6 +357,7 @@ git commit -m "feat: add Header component"
 ## Task 6: Create Main Page
 
 **Files:**
+
 - Modify: `app/page.tsx`
 - Modify: `app/globals.css`
 
@@ -416,6 +424,7 @@ git commit -m "feat: implement main page with project showcase"
 ## Task 7: Configure Layout and Metadata
 
 **Files:**
+
 - Modify: `app/layout.tsx`
 - Create: `app/sitemap.ts`
 
@@ -512,6 +521,7 @@ git commit -m "feat: add SEO metadata and sitemap"
 ## Task 8: Setup Prettier
 
 **Files:**
+
 - Create: `.prettierrc`
 - Create: `.prettierignore`
 
@@ -575,6 +585,7 @@ git commit -m "feat: setup Prettier"
 ## Task 9: Create DigitalOcean App Platform Config
 
 **Files:**
+
 - Create: `.do/app.yaml`
 
 **Step 1: Create .do directory**
@@ -610,6 +621,7 @@ git commit -m "feat: add DigitalOcean App Platform configuration"
 ## Task 10: Final Build and Verification
 
 **Files:**
+
 - Create: `README.md`
 
 **Step 1: Create README**
@@ -671,7 +683,7 @@ Expected: Build succeeds with no errors
 ls -la out/
 ```
 
-Expected: Contains index.html, _next/, sitemap.xml
+Expected: Contains index.html, \_next/, sitemap.xml
 
 **Step 4: Test static server (optional)**
 
@@ -694,6 +706,7 @@ git commit -m "docs: add README"
 ## Task 11: Run Linter and Type Check
 
 **Files:**
+
 - None (verification step)
 
 **Step 1: Run ESLint**
@@ -723,6 +736,7 @@ Expected: All files formatted correctly
 **Step 4: If any issues, fix and commit**
 
 If errors found:
+
 ```bash
 npm run format
 npm run lint -- --fix

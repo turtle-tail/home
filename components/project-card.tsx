@@ -19,14 +19,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-gray-900">
-          {project.title}
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm">
-          {project.description}
-        </p>
+        <p className="text-gray-600 text-sm">{project.description}</p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -42,9 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Featured badge */}
         {project.featured && (
-          <div className="text-xs font-medium text-blue-600">
-            ⭐ Featured
-          </div>
+          <div className="text-xs font-medium text-blue-600">⭐ Featured</div>
         )}
       </div>
     </a>
