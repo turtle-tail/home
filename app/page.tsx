@@ -1,7 +1,15 @@
+import Image from 'next/image';
+
 export default function HomePage() {
   return (
-    <main>
-      <h1>Hello world!</h1>
+    <main className="flex min-h-screen items-center justify-center">
+      <Image
+        src="/turtle.jpeg"
+        alt="Turtle"
+        width={600}
+        height={600}
+        priority
+      />
     </main>
   );
 }
