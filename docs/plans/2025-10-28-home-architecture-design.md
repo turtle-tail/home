@@ -9,12 +9,14 @@
 turtle-tail organization의 메인 홈페이지로, 여러 사이드 프로젝트들을 모아서 보여주는 쇼케이스 사이트입니다.
 
 ### 주요 특징
+
 - hypermatic.com 스타일의 프로젝트 갤러리
 - 카드 기반 UI로 각 프로젝트 표시
 - 프로젝트 클릭 시 외부 링크로 이동 (예: project1.turtle-tail.com)
 - 정적 사이트 (SSG)
 
 ### 업데이트 빈도
+
 - 월 1-2회 또는 분기 1-2회 (낮음)
 - 프로젝트 추가/수정 시 코드 커밋 후 자동 배포
 
@@ -23,17 +25,20 @@ turtle-tail organization의 메인 홈페이지로, 여러 사이드 프로젝�
 ### 선택: 프론트엔드 전용 (SSG)
 
 **이유:**
+
 - 단순 쇼케이스 목적 (백엔드 불필요)
 - 낮은 업데이트 빈도 (동적 CMS 오버엔지니어링)
 - 초고속 로딩 필요
 - 유지보수 부담 최소화
 
 **데이터 관리: TypeScript 파일**
+
 - Markdown 대신 TypeScript 선택
 - 짧은 설명(1-2줄)만 필요하여 TS의 타입 안정성이 더 유리
 - IDE 자동완성 및 빌드 타임 검증
 
 **배포: DigitalOcean App Platform (무료)**
+
 - 정적 사이트 3개까지 무료
 - 월 1GB 트래픽 무료 (쇼케이스 사이트로 충분)
 - GitHub 연동 자동 배포
@@ -42,14 +47,14 @@ turtle-tail organization의 메인 홈페이지로, 여러 사이드 프로젝�
 
 ## 3. 기술 스택
 
-| 항목 | 기술 | 이유 |
-|------|------|------|
-| **프레임워크** | Next.js 14 (App Router) | SSG 지원, React 기반 |
-| **언어** | TypeScript | 타입 안정성 |
-| **스타일링** | Tailwind CSS | 빠른 개발, 반응형 |
-| **린트/포맷** | ESLint + Prettier | 코드 품질 유지 |
-| **배포** | DigitalOcean App Platform | 무료, 자동 배포 |
-| **도메인** | turtle-tail.com | 커스텀 도메인 |
+| 항목           | 기술                      | 이유                 |
+| -------------- | ------------------------- | -------------------- |
+| **프레임워크** | Next.js 14 (App Router)   | SSG 지원, React 기반 |
+| **언어**       | TypeScript                | 타입 안정성          |
+| **스타일링**   | Tailwind CSS              | 빠른 개발, 반응형    |
+| **린트/포맷**  | ESLint + Prettier         | 코드 품질 유지       |
+| **배포**       | DigitalOcean App Platform | 무료, 자동 배포      |
+| **도메인**     | turtle-tail.com           | 커스텀 도메인        |
 
 ## 4. 폴더 구조
 
@@ -87,14 +92,14 @@ home/
 ```typescript
 // lib/types.ts
 export interface Project {
-  id: string;                    // URL slug용 (예: 'ai-chatbot')
-  title: string;                 // 프로젝트 제목
-  description: string;           // 짧은 설명 (1-2줄)
-  url: string;                   // 외부 프로젝트 URL
-  icon: string;                  // 아이콘 경로 (예: '/icons/project.svg')
-  tags: string[];                // 카테고리 태그 (예: ['AI', 'Web'])
-  order: number;                 // 표시 순서 (작을수록 먼저)
-  featured?: boolean;            // 추천 프로젝트 표시 (옵션)
+  id: string; // URL slug용 (예: 'ai-chatbot')
+  title: string; // 프로젝트 제목
+  description: string; // 짧은 설명 (1-2줄)
+  url: string; // 외부 프로젝트 URL
+  icon: string; // 아이콘 경로 (예: '/icons/project.svg')
+  tags: string[]; // 카테고리 태그 (예: ['AI', 'Web'])
+  order: number; // 표시 순서 (작을수록 먼저)
+  featured?: boolean; // 추천 프로젝트 표시 (옵션)
   status?: 'active' | 'archived'; // 프로젝트 상태 (옵션)
 }
 ```
@@ -124,11 +129,13 @@ export const projects: Project[] = [
 ## 6. 컴포넌트 구조
 
 ### ProjectCard
+
 - 단일 프로젝트 카드 표시
 - 외부 링크 (`target="_blank"`)
 - 아이콘, 제목, 설명, 태그 렌더링
 
 ### ProjectGrid
+
 - 프로젝트 배열을 그리드로 렌더링
 - `order` 필드로 자동 정렬
 - 반응형 레이아웃:
@@ -137,6 +144,7 @@ export const projects: Project[] = [
   - 데스크톱: 3열
 
 ### Header
+
 - 로고, 사이트 제목
 - 간단한 소개 문구
 
@@ -178,6 +186,7 @@ module.exports = nextConfig;
 ### DigitalOcean App Platform 설정
 
 #### 연동 방법
+
 1. App Platform 대시보드에서 "Create App"
 2. GitHub 저장소 연결 (turtle-tail/home)
 3. `main` 브랜치 선택
@@ -213,15 +222,16 @@ App Platform이 자동 감지하지만, 명시적 설정도 가능:
 ```yaml
 name: turtle-tail-home
 static_sites:
-- name: home
-  github:
-    branch: main
-    deploy_on_push: true
-  build_command: npm run build
-  output_dir: out
+  - name: home
+    github:
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: out
 ```
 
 ### 도메인 설정
+
 - App Platform에서 `turtle-tail.com` 추가
 - DNS에서 CNAME 레코드 설정 (App Platform 제공)
 - 자동 SSL 인증서 발급 (Let's Encrypt)
@@ -271,6 +281,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ```
 
 ### 성능 목표
+
 - Lighthouse 점수: 95+ (모든 항목)
 - First Contentful Paint: < 1초
 - Tailwind purge로 최소 CSS 크기
@@ -279,6 +290,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ## 9. 운영 계획
 
 ### 프로젝트 추가 프로세스
+
 1. `content/projects.ts` 파일 열기
 2. 새 프로젝트 객체 추가 (타입 체크로 오류 방지)
 3. 아이콘 파일을 `public/icons/` 에 추가
@@ -287,11 +299,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 6. App Platform 자동 배포 (3-5분 소요)
 
 ### 비용
+
 - **현재:** $0/월 (무료 티어)
 - **트래픽 초과 시:** $0.02/GB (1GB 초과분)
 - **예상:** 쇼케이스 사이트라 월 1GB 미만 예상
 
 ### 향후 확장
+
 - 현재는 단순 쇼케이스
 - 나중에 필요 시:
   - 블로그 섹션 추가 (Markdown 파일)
@@ -320,6 +334,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ```
 
 **장점:**
+
 - Home은 무료로 운영
 - 사이드 프로젝트들은 하나의 Droplet에 통합 관리
 - 비용 최적화 및 관리 효율성

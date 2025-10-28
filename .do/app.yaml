@@ -1,0 +1,8 @@
+name: turtle-tail-home
+static_sites:
+  - name: home
+    github:
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: out
