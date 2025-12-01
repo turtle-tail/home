@@ -15,7 +15,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col gap-4">
         {/* Icon */}
         <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-          <span className="text-2xl">🚀</span>
+          <span className="text-3xl">{project.icon}</span>
         </div>
 
         {/* Title */}

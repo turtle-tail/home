@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'turtle-tail',
-    description: '사이드 프로젝트 모음',
+    title: 'turtle tail',
+    description: '',
     url: 'https://turtle-tail.com',
     siteName: 'turtle-tail',
     locale: 'ko_KR',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'turtle-tail',
-    description: '사이드 프로젝트 모음',
+    title: 'turtle tail',
+    description: '',
   },
 };
 
