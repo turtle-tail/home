@@ -3,9 +3,19 @@ import './globals.css';
 import { GoogleAnalytics, GoogleAds, MicrosoftClarity } from '@/components/analytics';
 
 export const metadata: Metadata = {
-  title: 'turtle tail',
-  description: '다양한 사이드 프로젝트들을 소개합니다',
-  keywords: ['프로젝트', '포트폴리오', 'side project'],
+  title: 'turtle-tail | 무료 웹 서비스 - 심리테스트, 이미지 비교 도구',
+  description:
+    'turtle-tail에서 다양한 무료 웹 서비스를 이용해보세요. 재미있는 심리테스트, 정밀한 이미지 비교 도구 등 유용한 서비스를 제공합니다.',
+  keywords: [
+    '심리테스트',
+    '이미지 비교',
+    '무료 도구',
+    '웹 서비스',
+    'MBTI',
+    '성격 테스트',
+    'PixelDiff',
+    'turtle-tail',
+  ],
   verification: {
     other: {
       'naver-site-verification': '1af20bdbf7014b6b782e50988646ac232c32ca80',
@@ -13,8 +23,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'turtle tail',
-    description: '',
+    title: 'turtle-tail | 무료 웹 서비스',
+    description:
+      '심리테스트, 이미지 비교 도구 등 다양한 무료 웹 서비스를 제공합니다.',
     url: 'https://turtle-tail.com',
     siteName: 'turtle-tail',
     locale: 'ko_KR',
@@ -22,8 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'turtle tail',
-    description: '',
+    title: 'turtle-tail | 무료 웹 서비스',
+    description:
+      '심리테스트, 이미지 비교 도구 등 다양한 무료 웹 서비스를 제공합니다.',
   },
 };
 
